@@ -1,0 +1,38 @@
+option gurobi_options 'presolve=2 iis=1 outlev=1';
+
+option presolve 0;
+option show_stats 2;
+
+
+
+display V;
+display S;
+display T;
+display E;
+
+
+
+solve;
+if solve_result = "infeasible" then
+{
+	printf "--- infeasible problem ---\n\n";
+}
+else
+{
+	display Use;
+	
+	printf "The longest path\n";
+	printf "================\n";
+	printf "Path length = %E\n", path_length;
+	printf "SOURCE = %s\n", S;
+	printf "TARGET = %s\n", T;
+	
+	for {(i, j) in E}
+	{
+		if Use[i, j] > 0 then
+		{
+			printf "%s -> %s\n", i, j;
+		}
+	}
+}
+
