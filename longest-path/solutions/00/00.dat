@@ -1,0 +1,18 @@
+set V := a b c d e f g ;
+
+param S := a ;
+param T := g ;
+
+param:  E:  length :=
+a b     50
+a c    100
+b d     40
+b e     20
+c d     60
+c f     20
+d e     50
+d f     60
+e g     70
+f g     70
+;
+         
