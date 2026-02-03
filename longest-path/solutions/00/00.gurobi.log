@@ -1,0 +1,115 @@
+
+
+*************************************************************
+
+   NEOS Server Version 6.0
+   Job#     : 18320344
+   Password : onpUqiSK
+   User     : 
+   Solver   : milp:Gurobi:AMPL
+   Start    : 2026-02-03 09:28:15
+   End      : 2026-02-03 09:28:18
+   Host     : prod-sub-1.neos-server.org
+
+   Disclaimer:
+
+   This information is provided without any express or
+   implied warranty. In particular, there is no warranty
+   of any kind concerning the fitness of this
+   information for any particular purpose.
+
+   Announcements:
+*************************************************************
+You are using the solver gurobi_ampl.
+Checking ampl.mod for gurobi_options...
+Checking ampl.com for gurobi_options...
+Executing AMPL.
+processing data.
+processing commands.
+Executing on prod-exec-6.neos-server.org
+set V := a b c d e f g;
+
+S = a
+
+T = g
+
+set E := (a,b) (a,c) (b,d) (b,e) (c,d) (c,f) (d,e) (d,f) (e,g) (f,g);
+
+
+"option presolve 0;" used, but "option presolve 10;" might work better.
+10 variables, all linear
+6 constraints, all linear; 18 nonzeros
+	6 equality constraints
+1 linear objective; 10 nonzeros.
+
+Gurobi 12.0.3:   tech:threads = 4
+  pre:solve = 2
+  alg:iisfind = 1
+Set parameter LogToConsole to value 1
+  tech:outlev = 1
+
+AMPL MP initial flat model has 10 variables (0 integer, 0 binary);
+Objectives: 1 linear; 
+Constraints:  6 linear;
+
+AMPL MP final model has 10 variables (0 integer, 0 binary);
+Objectives: 1 linear; 
+Constraints:  6 linear;
+
+
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (linux64 - "Rocky Linux 8.10 (Green Obsidian)")
+
+CPU model: Intel(R) Xeon(R) Gold 6140 CPU @ 2.30GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 36 physical cores, 72 logical processors, using up to 4 threads
+
+Non-default parameters:
+InfUnbdInfo  1
+Presolve  2
+Threads  4
+
+Optimize a model with 6 rows, 10 columns and 18 nonzeros
+Model fingerprint: 0xb5bcbacb
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e+01, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 2 rows and 3 columns
+Presolve time: 0.00s
+Presolved: 4 rows, 7 columns, 12 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    4.3000000e+02   3.000000e+00   0.000000e+00      0s
+Extra simplex iterations after uncrush: 1
+       5    2.9000000e+02   0.000000e+00   0.000000e+00      0s
+
+Solved in 5 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  2.900000000e+02
+Gurobi 12.0.3: optimal solution; objective 290
+5 simplex iterations
+Use :=
+a b   0
+a c   1
+b d   0
+b e   0
+c d   1
+c f   0
+d e   0
+d f   1
+e g   0
+f g   1
+;
+
+The longest path
+================
+Path length = 2.900000E+02
+SOURCE = a
+TARGET = g
+a -> c
+c -> d
+d -> f
+f -> g
+
+NEOS Server Home
+
