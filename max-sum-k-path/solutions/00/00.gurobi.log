@@ -1,0 +1,138 @@
+
+
+*************************************************************
+
+   NEOS Server Version 6.0
+   Job#     : 18320792
+   Password : BJYocEWz
+   User     : 
+   Solver   : milp:Gurobi:AMPL
+   Start    : 2026-02-03 10:54:35
+   End      : 2026-02-03 10:54:40
+   Host     : prod-sub-1.neos-server.org
+
+   Disclaimer:
+
+   This information is provided without any express or
+   implied warranty. In particular, there is no warranty
+   of any kind concerning the fitness of this
+   information for any particular purpose.
+
+   Announcements:
+*************************************************************
+You are using the solver gurobi_ampl.
+Checking ampl.mod for gurobi_options...
+Checking ampl.com for gurobi_options...
+Executing AMPL.
+processing data.
+processing commands.
+Executing on prod-exec-5.neos-server.org
+K = 2
+
+set V := a b c d e f g;
+
+S = a
+
+T = g
+
+set E := (a,b) (a,c) (b,d) (b,e) (c,d) (c,f) (d,e) (d,f) (e,g) (f,g);
+
+
+"option presolve 0;" used, but "option presolve 10;" might work better.
+20 variables, all binary
+23 constraints, all linear; 76 nonzeros
+	12 equality constraints
+	11 inequality constraints
+1 linear objective; 20 nonzeros.
+
+Gurobi 12.0.3:   tech:threads = 4
+  pre:solve = 2
+  alg:iisfind = 1
+Set parameter LogToConsole to value 1
+  tech:outlev = 1
+
+AMPL MP initial flat model has 20 variables (0 integer, 20 binary);
+Objectives: 1 linear; 
+Constraints:  23 linear;
+
+AMPL MP final model has 20 variables (0 integer, 20 binary);
+Objectives: 1 linear; 
+Constraints:  23 linear;
+
+
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (linux64 - "Rocky Linux 8.10 (Green Obsidian)")
+
+CPU model: Intel(R) Xeon(R) CPU E5-2430 0 @ 2.20GHz, instruction set [SSE2|AVX]
+Thread count: 12 physical cores, 24 logical processors, using up to 4 threads
+
+Non-default parameters:
+InfUnbdInfo  1
+Presolve  2
+Threads  4
+
+Optimize a model with 23 rows, 20 columns and 76 nonzeros
+Model fingerprint: 0x3154ebde
+Variable types: 0 continuous, 20 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+02]
+  Objective range  [2e+01, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective 400.0000000
+Presolve removed 23 rows and 20 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 24 available processors)
+
+Solution count 2: 500 400 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.000000000000e+02, best bound 5.000000000000e+02, gap 0.0000%
+Gurobi 12.0.3: optimal solution; objective 500
+0 simplex iterations
+X :=
+a b 1   0
+a b 2   1
+a c 1   1
+a c 2   0
+b d 1   0
+b d 2   1
+b e 1   0
+b e 2   0
+c d 1   1
+c d 2   0
+c f 1   0
+c f 2   0
+d e 1   1
+d e 2   0
+d f 1   0
+d f 2   1
+e g 1   1
+e g 2   0
+f g 1   0
+f g 2   1
+;
+
+The found paths
+================
+Total sum of the weights of K paths = 5.000000E+02
+SOURCE = a
+TARGET = g
+Weight of path 1 is 2.800000E+02
+================
+a -> c
+c -> d
+d -> e
+e -> g
+Weight of path 2 is 2.200000E+02
+================
+a -> b
+b -> d
+d -> f
+f -> g
+
+NEOS Server Home
+

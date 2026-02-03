@@ -1,0 +1,18 @@
+digraph finite_state_machine {
+	fontname="Helvetica,Arial,sans-serif"
+	node [fontname="Helvetica,Arial,sans-serif"]
+	edge [fontname="Helvetica,Arial,sans-serif"]
+	rankdir=LR;
+	node [shape = doublecircle]; a g;
+	node [shape = circle];
+	a -> b [label = "50"];
+	a -> c [label = "100" color="red"];
+	b -> d [label = "40"];
+	b -> e [label = "20"];
+	c -> d [label = "60" color="red"];
+	c -> f [label = "20"];
+	d -> e [label = "50"];
+	d -> f [label = "60" color="red"];
+	e -> g [label = "70"];
+	f -> g [label = "70" color="red"];
+}
