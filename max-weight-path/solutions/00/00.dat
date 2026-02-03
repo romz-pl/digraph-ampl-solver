@@ -3,7 +3,7 @@ set V := a b c d e f g ;
 param S := a ;
 param T := g ;
 
-param:  E:  length :=
+param:  E:  weight :=
 a b     50
 a c    100
 b d     40

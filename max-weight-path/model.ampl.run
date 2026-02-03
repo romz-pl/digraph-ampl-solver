@@ -19,17 +19,17 @@ if solve_result = "infeasible" then
 }
 else
 {
-	display Use;
+	display X;
 	
-	printf "The longest path\n";
+	printf "Path of maximum weight\n";
 	printf "================\n";
-	printf "Path length = %E\n", path_length;
+	printf "Path weight = %E\n", path_weight;
 	printf "SOURCE = %s\n", S;
 	printf "TARGET = %s\n", T;
 	
 	for {(i, j) in E}
 	{
-		if Use[i, j] > 0 then
+		if X[i, j] > 0 then
 		{
 			printf "%s -> %s\n", i, j;
 		}

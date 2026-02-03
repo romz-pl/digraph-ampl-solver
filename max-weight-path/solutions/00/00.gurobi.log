@@ -3,12 +3,12 @@
 *************************************************************
 
    NEOS Server Version 6.0
-   Job#     : 18320344
-   Password : onpUqiSK
+   Job#     : 18320893
+   Password : NwWUQdfx
    User     : 
    Solver   : milp:Gurobi:AMPL
-   Start    : 2026-02-03 09:28:15
-   End      : 2026-02-03 09:28:18
+   Start    : 2026-02-03 11:09:59
+   End      : 2026-02-03 11:10:06
    Host     : prod-sub-1.neos-server.org
 
    Disclaimer:
@@ -88,7 +88,7 @@ Solved in 5 iterations and 0.00 seconds (0.00 work units)
 Optimal objective  2.900000000e+02
 Gurobi 12.0.3: optimal solution; objective 290
 5 simplex iterations
-Use :=
+X :=
 a b   0
 a c   1
 b d   0
@@ -101,9 +101,9 @@ e g   0
 f g   1
 ;
 
-The longest path
+Path of maximum weight
 ================
-Path length = 2.900000E+02
+Path weight = 2.900000E+02
 SOURCE = a
 TARGET = g
 a -> c
