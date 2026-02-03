@@ -25,7 +25,8 @@ param length {E};
 
 # Decision variable.
 # There is U[i, j] = 1 iff edge (i, j) is in the longest path.
-var Use {(i, j) in E} >= 0, <= 1; (binary variable?)
+# (binary variable?)
+var Use {(i, j) in E} >= 0, <= 1; 
 
 # Objective function.
 # The lenght of the path
