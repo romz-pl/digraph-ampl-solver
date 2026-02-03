@@ -1,0 +1,43 @@
+option gurobi_options 'presolve=2 iis=1 outlev=1';
+
+option presolve 0;
+option show_stats 2;
+
+
+display K;
+display V;
+display S;
+display T;
+display E;
+
+
+
+solve;
+if solve_result = "infeasible" then
+{
+	printf "--- infeasible problem ---\n\n";
+}
+else
+{
+	display X;
+	
+	printf "The found paths\n";
+	printf "================\n";
+	printf "Total sum of the weights of K paths = %E\n", sum_path_weight;
+	printf "SOURCE = %s\n", S;
+	printf "TARGET = %s\n", T;
+	
+	for{k in 1..K}
+	{
+		printf "Weight of path %d is %E\n", k, sum {(i, j) in E} weight[i, j] * X[i, j, k];
+		printf "================\n";
+		for{(i, j) in E}
+		{
+			if X[i, j, k] > 0 then
+			{
+				printf "%s -> %s\n", i, j;
+			}
+		}
+	}
+}
+
