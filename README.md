@@ -7,3 +7,8 @@
 
 > [!NOTE]
 > The **maximum weight of $K$ paths problem** between two given vertices $s$ and $t$ in a graph $G$ is the problem of finding a $K$ distinct, simple paths between nodes $s$ and $t$ maximizing the sum of the weight of $K$ paths.
+
+
+## References
++ D.M. Gay, B.W. Kernighan [AMPL: A Modeling Language for Mathematical Programming](https://ampl.com/wp-content/uploads/BOOK.pdf), 2003
++ 
